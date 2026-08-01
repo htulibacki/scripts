@@ -1,0 +1,8 @@
+# Katalog zawiera glownie binaria instalowane menedzerami pakietow
+# (uv, whisper.cpp, pipx) - te nie naleza do repozytorium. Ignorujemy
+# wszystko i dopuszczamy KAZDY plik z osobna, zeby nowy skrypt wrzucony
+# tutaj nie trafil do repo przez przypadek.
+*
+
+!.gitignore
+!speech-to-text.sh
