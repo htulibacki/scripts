@@ -5,6 +5,11 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export LANG=pl_PL.UTF-8
 export LC_ALL=pl_PL.UTF-8
 
+# whisper-cli wola getcwd() przy starcie, zeby znalezc swoje biblioteki.
+# Katalog odziedziczony po Hammerspoonie (~/.hammerspoon) jest symlinkiem,
+# a wtedy getcwd() dostaje "Operation not permitted" i proces pada (SIGABRT).
+cd /tmp
+
 WHISPER="$HOME/.local/bin/whisper-cli"
 MODEL="$HOME/Ai/Models/ggml-large-v3-turbo.bin"
 VAD_MODEL="$HOME/Ai/Models/ggml-silero-v5.1.2.bin"
